@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  <div id="site-content">
-    
-  </div>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="site-content">
+      
+    </div>
+    <div class="container">
+      <input type="text" id="pos-x" value="pos-x" />
+      <input type="text" id="pos-y" value="pos-y" />
+    </div>
+    <script>
+      window.addEventListener("mousemove", (event) => {
+        const mouseX = event.pageX;
+        const mouseY = event.pageY;
+        document.querySelector ("#pos-x").value = `pos-x: ${mouseX}`;
+        document.querySelector ("#pos-y").value = `pos-y: ${mouseY}`;
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
