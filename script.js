@@ -3,13 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const yLine = document.querySelector(".y-line");
 
   function updateMousePosition(event) {
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
 
-      xLine.style.transform = `translateY(${mouseY}px)`;
-      yLine.style.transform = `translateX(${mouseX}px)`;
+    xLine.style.top = `${mouseY}px`;
+    yLine.style.left = `${mouseX}px`;
 
-      document.querySelector("#position").textContent = `X: ${mouseX}, Y: ${mouseY}`;
+    document.querySelector(
+      "#position"
+    ).textContent = `X: ${mouseX}, Y: ${mouseY}`;
   }
 
   window.addEventListener("mousemove", updateMousePosition);

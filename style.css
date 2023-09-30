@@ -9,8 +9,7 @@ body {
 }
 
 #site-content {
-  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMyIgaGVpZ2h0PSIzIj4KICA8Y2lyY2xlIGN4PSIzLjUiIGN5PSIzLjUiIHI9IjEuNSIgZmlsbD0ibGF5ZXIiLz4KPC9zdmc+Cg=="),
-    auto;
+  cursor: crosshair;
   background-color: #fff;
   width: 90vw;
   height: 90vh;
@@ -18,23 +17,23 @@ body {
   position: relative;
 }
 
-#site-content > .x-line,
-#site-content > .y-line {
+.x-line,
+.y-line {
   position: absolute;
   background-color: #000;
   z-index: 1;
 }
 
-#site-content > .x-line {
+.x-line {
   width: 100%;
   height: 1px;
 }
 
-#site-content > .y-line {
+.y-line {
   width: 1px;
   height: 100%;
 }
-#position{
+#position {
   position: absolute;
   top: 0;
   left: 0;
